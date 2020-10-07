@@ -64,3 +64,7 @@ aws-iam-authenticator help
 CONFIGURAR KUBECTL CON PERMISOS DE WRITE:
 
 eksctl utils write-kubeconfig --cluster=stg
+
+luego agregar el usuario en el configmap:
+
+kubectl describe configmap -n kube-system aws-auth  (cambiar el describe por edit)
