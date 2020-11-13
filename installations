@@ -1,6 +1,8 @@
 INSTALAR CLIENTE DE EKS:
 
-source: https://www.youtube.com/watch?v=7SwFzYKySu0&ab_channel=Releaseworks
+source: 
+https://www.youtube.com/watch?v=7SwFzYKySu0&ab_channel=Releaseworks
+https://medium.com/blog-apside/cluster-de-kubernetes-con-aws-eks-explicado-e1c00c6ec686
 
 ------------------------------------------
 
@@ -61,7 +63,24 @@ aws-iam-authenticator help
 
 -----------------------------------------
 
-CONFIGURAR KUBECTL CON PERMISOS DE WRITE:
+UPDATEAR KUBE CONFIG:
+
+aws eks --region us-east-1 update-kubeconfig --name nombredelcluster
+
+-----------------------------------------
+
+CHECK CONFIG:
+
+kubectl config use-context nombrecluster
+
+kubectl config view
+
+/home/USUARIO/.kube
+/home/USUARIO/.aws
+
+-----------------------------------------
+
+CONFIGURAR KUBECTL CON PERMISOS DE WRITE: (para administrar usuarios)
 
 eksctl utils write-kubeconfig --cluster=stg
 
