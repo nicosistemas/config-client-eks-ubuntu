@@ -1,6 +1,7 @@
 INSTALAR CLIENTE DE EKS:
 
 source: 
+https://docs.aws.amazon.com/es_es/eks/latest/userguide/getting-started-console.html
 https://www.youtube.com/watch?v=7SwFzYKySu0&ab_channel=Releaseworks
 https://medium.com/blog-apside/cluster-de-kubernetes-con-aws-eks-explicado-e1c00c6ec686
 
