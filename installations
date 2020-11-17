@@ -1,4 +1,4 @@
-INSTALAR CLIENTE DE EKS:
+INSTALAR CLIENTE KUBERNETES:
 
 source: 
 https://docs.aws.amazon.com/es_es/eks/latest/userguide/getting-started-console.html
@@ -7,7 +7,7 @@ https://medium.com/blog-apside/cluster-de-kubernetes-con-aws-eks-explicado-e1c00
 
 ------------------------------------------
 
-INSTALAR AWS CLI:
+1 - INSTALAR AWS CLI:
 
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-format
 
@@ -24,7 +24,7 @@ directory: cd ~/.aws
 
 --------------------------------------------
 
-INSTALAR EKSCTL:
+2 - INSTALAR EKSCTL:
 
 https://eksctl.io/introduction/#installation
 
@@ -36,7 +36,7 @@ eksctl version
 
 --------------------------------------
 
-INSTALAR KUBECTL:
+3 - INSTALAR KUBECTL:
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.19.0/bin/linux/amd64/kubectl
 
@@ -48,7 +48,7 @@ kubectl version --client
 
 ---------------------------------------
 
-INSTALAR AWS IAM AUTHENTICATOR:
+4 - INSTALAR AWS IAM AUTHENTICATOR:
 
 https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
 
@@ -63,20 +63,24 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 aws-iam-authenticator help
 
 -----------------------------------------
+EXTRAS:
+-----------------------------------------
 
 UPDATEAR KUBE CONFIG:
 
 aws eks --region us-east-1 update-kubeconfig --name nombredelcluster
 
+kubectl config use-context nombrecluster
 -----------------------------------------
 
 CHECK CONFIG:
 
-kubectl config use-context nombrecluster
+kubectl config get-contexts
 
 kubectl config view
-
 /home/USUARIO/.kube
+
+aws configure list
 /home/USUARIO/.aws
 
 -----------------------------------------
