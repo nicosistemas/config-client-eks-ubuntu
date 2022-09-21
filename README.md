@@ -57,6 +57,16 @@ v1.19:
 Última versión:
 `curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"`
 
+IMPORTANTE: puede ser que la última versión no funcione correctamente, da el error:
+
+error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"
+
+Unable to connect to the server: getting credentials: decoding stdout: no kind "ExecCredential" is registered for version "client.authentication.k8s.io/v1alpha1" in scheme "pkg/client/auth/exec/exec.go:62"
+
+Para solucionar eso usar la versión 1.23.6:
+
+`curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl`
+
 `chmod +x ./kubectl`
 
 
