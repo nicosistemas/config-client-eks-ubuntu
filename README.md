@@ -112,6 +112,7 @@ https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.h
 ### CHECK CONFIG:
 
 `kubectl config get-contexts`
+
 Para borrar un contexto viejo: `kubectl config unset contexts.arn:aws:eks:us-east-1:xxxxxxxxxxx:cluster/NOMBRE`
 
 `kubectl config view`
