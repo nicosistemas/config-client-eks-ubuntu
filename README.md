@@ -65,6 +65,8 @@ _Unable to connect to the server: getting credentials: decoding stdout: no kind 
 
 Para solucionar eso usar la versión 1.23.6:
 
+`sudo rm /usr/local/bin/kubectl`
+
 `curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl`
 
 `chmod +x ./kubectl`
