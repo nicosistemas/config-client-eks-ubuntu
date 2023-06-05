@@ -46,17 +46,20 @@ https://eksctl.io/introduction/#installation
 
 `eksctl version`
 
+
 NEW Version:
 
-for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`
-ARCH=amd64
-PLATFORM=$(uname -s)_$ARCH
+(for ARM systems, set ARCH to: `arm64`, `armv6` or `armv7`)
 
-curl -sLO "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+`ARCH=amd64`
 
-tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+`PLATFORM=$(uname -s)_$ARCH`
 
-sudo mv /tmp/eksctl /usr/local/bin
+`curl -sLO "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"`
+
+`tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz`
+
+`sudo mv /tmp/eksctl /usr/local/bin`
 
 --------------------------------------
 
