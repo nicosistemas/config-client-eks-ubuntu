@@ -33,10 +33,13 @@ Try work: aws ec2 describe-regions
 directory: cd ~/.aws
 
 ####Update a la última versión de aws cli para resolver el update-kubeconfig de la versión kubectl 1.27.3 del v1alpha1####
+https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html
+
 
 `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
 
 `unzip awscliv2.zip`
+
 `aws --version`
 
 --------------------------------------------
